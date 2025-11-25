@@ -1,18 +1,3 @@
-"""
-Clustering and optimization pipeline for Wi-Fi access points.
-
-This script is designed to be transparent and report-ready. It:
-1) Loads the chosen dataset (data 3 access point) and builds 13 per-AP features.
-2) Standardizes features.
-3) Runs a clear clustering objective (k-means SSE) with two strategies:
-   - Baseline: multi-start k-means++ + Lloyd's updates across k ranges.
-   - Optimizer: deterministic annealing (niche method) for k=3.
-4) Evaluates with SSE, silhouette, and cluster sizes.
-5) Writes results to results_summary.json and results_summary.txt.
-
-No ML libraries are used; only pandas/numpy/matplotlib-compatible code.
-"""
-
 from __future__ import annotations
 
 import json
